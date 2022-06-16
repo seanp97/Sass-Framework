@@ -256,7 +256,7 @@ $colors: red,blue,green,orange,white,black,yellow,purple,silver,brown,gray,pink,
 
 @each $color in $colors {
     .bg-color-#{$color} {
-      color: $color;
+      background-color: $color;
     }
 }
 
