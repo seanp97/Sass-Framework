@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: calc(80% - 30px);
+    margin: 0 auto;
+}
+
+// Line Height
+
+@for $i from 1 through 50 {
+    .lh-#{$i} {
+        line-height: $i + px;
+    }
+}
+
+//Margin reset
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mb-0 {
+    margin-top: 0;
+}
+
+.ml-0 {
+    margin-top: 0;
+}
+
+.mr-0 {
+    margin-top: 0;
+}
+
+.m-block-0 {
+    margin-block: 0;
+}
+
+.m-inline-0 {
+    margin-block: 0;
+}
+
+//Padding reset
+
+.pt-0 {
+    padding-top: 0;
+}
+
+.pb-0 {
+    padding-top: 0;
+}
+
+.pl-0 {
+    padding-top: 0;
+}
+
+.pr-0 {
+    padding-top: 0;
+}
+
+.p-block-0 {
+    padding-block: 0;
+}
+
+.p-inline-0 {
+    padding-inline: 0;
+}
+
+// Full Viewport height
+
+.full-viewport {
+    height: 100vh;
+}
+
+//Margins
+
+@for $i from 1 through 15 {
+    .mt-#{$i} {
+        margin-top: $i + em;
+    }
+}
+
+@for $i from 1 through 15 {
+    .mb-#{$i} {
+        margin-bottom: $i + em;
+    }
+}
+
+@for $i from 1 through 15 {
+    .ml-#{$i} {
+        margin-left: $i + em;
+    }
+}
+
+@for $i from 1 through 15 {
+    .mr-#{$i} {
+        margin-right: $i + em;
+    }
+}
+
+@for $i from 1 through 15 {
+    .m-block-#{$i} {
+        margin-block: $i + em;
+    }
+}
+
+@for $i from 1 through 15 {
+    .m-inline-#{$i} {
+        margin-inline: $i + em;
+    }
+}
+
+//Padding
+
+@for $i from 1 through 15 {
+    .pt-#{$i} {
+        padding-top: $i + em;
+    }
+}
+
+@for $i from 1 through 15 {
+    .pb-#{$i} {
+        padding-bottom: $i + em;
+    }
+}
+
+@for $i from 1 through 15 {
+    .pl-#{$i} {
+        padding-left: $i + em;
+    }
+}
+
+@for $i from 1 through 15 {
+    .pr-#{$i} {
+        padding-right: $i + em;
+    }
+}
+
+@for $i from 1 through 15 {
+    .p-block-#{$i} {
+        padding-block: $i + em;
+    }
+}
+
+@for $i from 1 through 15 {
+    .p-inline-#{$i} {
+        padding-inline: $i + em;
+    }
+}
+
+
+//Width 
+
+.full-width {
+    width: 100%;
+}
+
+.half-width {
+    width: 50%;
+}
+
+// Top, Left, Right, Bottom
+
+.top-0 {
+    top: 0;
+}
+
+.left-0 {
+    left: 0;
+}
+
+.right-0 {
+    right: 0;
+}
+
+.bottom-0 {
+    bottom: 0;
+}
+
+//Background Sizes
+
+$bg-sizes: auto,cover,contain,initial,inherit;
+
+@each $bg-size in $bg-sizes {
+    .bg-size-#{$bg-size} {
+        background-size: $bg-size;
+    }
+}
+
+//Background Position
+
+$bg-pos: left, top, right, bottom, center, initial, inherit, revert, unset;
+
+@each $pos in $bg-pos {
+    .bg-pos-#{$pos} {
+        background-position: $pos;
+    }
+}
+
+.bg-repeat {
+    background-repeat: no-repeat;
+}
+
+//Display
+
+$display-props: inline,block,contents,flex,grid,inline-block,inline-flex,inline-grid,inline-table,list-item,run-in,table,table-caption,table-column-group,table-header-group,table-footer-group,table-row-group	,table-cell	,table-column,table-row	,none,initial,inherit;
+
+@each $disp-item in $display-props {
+    .display-#{$disp-item} {
+        display: $disp-item;
+    }
+}
+
+// Text align
+
+$text-align-props: left,right,center,justify,initial,inherit;
+
+@each $text-align in $text-align-props {
+    .text-#{$text-align} {
+        text-align: $text-align;
+    }
+}
+
+// Font weight
+
+$font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+@each $fw in $font-weights {
+    .fw-#{$fw} {
+        font-weight: $fw;
+    }
+}
+
+// Colours
+
+$colors: red,blue,green,orange,white,black,yellow,purple,silver,brown,gray,pink,olive,maroon,violet,magenta,gold,tan,teal,navy,blue,coral,lavender,indigo,cyan,azure,beige,turquoise;
+
+@each $color in $colors {
+    .color-#{$color} {
+      color: $color;
+    }
+}
+
+@each $color in $colors {
+    .background-color-#{$color} {
+      color: $color;
+    }
+}
+
+// Floats 
+
+$float-props: none,left,right,initial, inherit;
+
+@each $float in $float-props {
+    .float-#{$float} {
+        float: $float; 
+    }
+}
+
+// Text Decoration
+
+$text-dec-props: auto, underline, dotted, solid, double, dashed, blink, inherit, initial, none, unset, line-through;
+
+@each $text-dec in $text-dec-props {
+    .text-dec-#{$text-dec} {
+        text-decoration: $text-dec;
+    }
+}
+
+// Position
+
+$position-props: relative, absolute, fixed, sticky, initial, inherit, unset, static, revert;
+
+@each $pos in $position-props {
+    .pos-#{$pos} {
+        position: $pos;
+    }
+}
+
+// Text Transform
+
+$text-transform-props: capitalize, lowercase, inherit, initial, uppercase, none, revert, math-auto;
+
+@each $text-trans in $text-transform-props {
+    .text-transform-#{$text-trans} {
+        text-transform: $text-trans;
+    }
+}
+
+//Font Sizes
+
+$base-font-size: 14px;
+$heading-scale: 6; 
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-size: $base-font-size + $heading-scale * (6 - $i);
+    }
+}
+
+p, span {
+    font-size: $base-font-size;
+}
+
+
+//Brightness
+
+@for $i from 1 through 10 {
+    brightness-#{$i} {
+        filter: brightness(#{$i}0%);
+    }
+}
+
+//Opacity
+
+@for $i from 1 through 10 {
+    opacity-#{$i} {
+        opacity: #{$i}0%;
+    }
+}
+
+//Letter Spacing
+
+@for $i from 1 through 40 {
+    ls-#{$i} {
+        letter-spacing: #{$i}px;
+    }
+}
+
+// Grid
+
+@for $i from 1 through 16 {
+    .grid-col-#{$i} {
+        grid-template-columns: repeat($i, 1fr);
+        display: grid;
+    }
+}
+
+//Column Gap 
+
+@for $i from 1 through 10 {
+    .col-gap-#{$i} {
+        column-gap: $i + em;
+    }
+}
+
+//Row Gap 
+
+@for $i from 1 through 10 {
+    .row-gap-#{$i} {
+        row-gap: $i + em;
+    }
+}
+
+//Grid Gap 
+
+@for $i from 1 through 10 {
+    .grid-gap-#{$i} {
+        grid-gap: $i + em;
+    }
+}
+
+
+//Border Radius
+
+@for $i from 1 through 100 {
+    .br-#{$i} {
+        border-radius: $i + %;
+    }
+}
+
+
+// Justify Content
+
+$justify-props: flex-start,flex-end,center,space-between,space-around,space-evenly,initial,inherit;
+
+@each $js-item in $justify-props {
+    .jc-#{$js-item} {
+        justify-content: $js-item;
+    }
+}
+
+
+//Align Items
+
+$align-props: center, stretch, initial, inherit, flex-start, flex-end, baseline, initial, inherit;
+
+@each $align-item in $align-props {
+    .al-item-#{$align-item} {
+        align-items: $align-item;
+    }
+}
+
+//Grid Media Sizes
+
+@media (max-width: 1200px) {
+    .grid-lg {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .grid-lg {
+        grid-template-columns: 100%;
+    }
+
+    .grid-md {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-sm {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .container {
+        width: calc(100% - 30px);
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 776px) {
+    .grid-sm {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-md {
+        grid-template-columns: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-sm {
+        grid-template-columns: 100%;
+    }
+}
