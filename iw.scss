@@ -224,6 +224,16 @@ $text-align-props: left,right,center,justify,initial,inherit;
     }
 }
 
+// Object Fit
+
+$obj-fit-props: fill, contain, cover, none, scale-down;
+
+@each $obj-fit in $obj-fit-props {
+    .obj-fit-#{$obj-fit} {
+        object-fit: $obj-fit;
+    }
+}
+
 // Font weight
 
 $font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
