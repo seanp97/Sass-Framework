@@ -404,12 +404,34 @@ $justify-props: flex-start,flex-end,center,space-between,space-around,space-even
 }
 
 
+// Flex Wrap
+
+$flex-wrap-props: wrap, nowrap, inherit, initial, unset, revert, wrap-reverse;
+
+@each $flex-wrap in $flex-wrap-props {
+    .flex-wrap-#{$flex-wrap} {
+        flex-wrap: $flex-wrap;
+    }
+}
+
+
+// Flex Direction
+
+$flex-dir-props: row,row-reverse,column,column-reverse,initial,inherit;
+
+@each $flex-dir in $flex-dir-props {
+    .flex-dir-#{$flex-dir} {
+        flex-direction: $flex-dir;
+    }
+}
+
+
 //Align Items
 
 $align-props: center, stretch, initial, inherit, flex-start, flex-end, baseline, initial, inherit;
 
 @each $align-item in $align-props {
-    .al-item-#{$align-item} {
+    .al-items-#{$align-item} {
         align-items: $align-item;
     }
 }
